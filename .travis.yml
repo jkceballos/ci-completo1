@@ -1,0 +1,16 @@
+language: python
+python:
+  - "3.10"
+
+services:
+  - docker
+
+install:
+  - pip install pytest pytest-cov codecov
+  - docker-compose build
+
+script:
+  - pytest --cov=backend backend/tests/
+
+after_success:
+  - codecov

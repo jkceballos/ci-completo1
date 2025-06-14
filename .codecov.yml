@@ -1,0 +1,6 @@
+coverage:
+  status:
+    project:
+      default: yes
+      backend:
+        target: 80%
